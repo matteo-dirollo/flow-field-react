@@ -2,7 +2,7 @@ export default function Particle(p5, scl, cols) {
     this.pos = p5.createVector(p5.random(p5.width), p5.random(p5.height));
     this.vel = p5.createVector(0, 0);
     this.acc = p5.createVector(0, 0);
-    this.maxspeed = 4;
+    this.maxspeed = 5;
     this.h = 0;
   
     this.prevPos = this.pos.copy();
