@@ -4,7 +4,7 @@ import Particle from './particle';
 
 const FlowField = props => {
   let inc = 0.01;
-  let scl = 100;
+  let scl = 20;
   let cols, rows;
 
   let zoff = 0;
