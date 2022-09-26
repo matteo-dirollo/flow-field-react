@@ -17,7 +17,7 @@ const FlowField = props => {
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
     p5.createCanvas(500, 500).parent(canvasParentRef);
-    p5.background(255);
+    p5.background(0);
     cols = p5.floor(p5.width / scl);
     rows = p5.floor(p5.height / scl);
 
@@ -28,7 +28,7 @@ const FlowField = props => {
   };
 
   const draw = p5 => {
-    p5.stroke(255);
+    p5.stroke(0);
     p5.noFill();
     let yoff = 0;
     for (let y = 0; y < rows; y++) {
@@ -46,10 +46,10 @@ const FlowField = props => {
       zoff += 0.0001;
     }
     for (let i = 0; i < particles.length; i++) {
-      particles[i].follow(flowfield);
-      particles[i].update();
-      particles[i].edges();
-      particles[i].show();
+      particles[i].follow(p5,flowfield);
+      particles[i].update(p5);
+      particles[i].edges(p5);
+      particles[i].show(p5);
     }
   };
 
