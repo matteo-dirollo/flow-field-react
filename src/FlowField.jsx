@@ -3,7 +3,7 @@ import Sketch from 'react-p5';
 import Particle from './particle';
 
 const FlowField = props => {
-  let inc = 0.001;
+  let inc = 0.01;
   let scl = 100;
   let cols, rows;
 
