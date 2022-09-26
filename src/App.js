@@ -1,9 +1,9 @@
-import './App.css';
+
 import FlowField from './FlowField';
 
 function App() {
   return (
-    <div className="App">
+    <div>
      <FlowField />
     </div>
   );

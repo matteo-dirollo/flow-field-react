@@ -3,7 +3,7 @@ import Sketch from 'react-p5';
 import Particle from './particle';
 
 const FlowField = props => {
-  let inc = 0.1;
+  let inc = 0.001;
   let scl = 100;
   let cols, rows;
 
@@ -43,7 +43,7 @@ const FlowField = props => {
         p5.stroke(0, 50);
       }
       yoff += inc;
-      zoff += 0.001;
+      zoff += 0.0001;
     }
     for (let i = 0; i < particles.length; i++) {
       particles[i].follow(flowfield);
